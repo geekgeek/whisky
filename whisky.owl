@@ -4,20 +4,20 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@base <http://www.whiskydb.org/myontology> .
+@base <http://www.semanticweb.org/guest0/ontologies/2017/9/untitled-ontology-18> .
 
-<http://www.whiskydb.org/myontology> rdf:type owl:Ontology .
+<http://www.semanticweb.org/guest0/ontologies/2017/9/untitled-ontology-18> rdf:type owl:Ontology .
 
 #################################################################
 #    Annotation properties
 #################################################################
 
-###  http://www.whiskydb.org/myontology#producedIn
+###  http://www.semanticweb.org/guest0/ontologies/2017/9/untitled-ontology-18#producedIn
 :producedIn rdf:type owl:AnnotationProperty ;
             rdfs:range <http://schema.org/Place> .
 
 
-###  http://www.whiskydb.org/myontology#produces
+###  http://www.semanticweb.org/guest0/ontologies/2017/9/untitled-ontology-18#produces
 :produces rdf:type owl:AnnotationProperty ;
           rdfs:range :Whisky .
 
@@ -26,13 +26,13 @@
 #    Object Properties
 #################################################################
 
-###  http://www.whiskydb.org/myontology#producedIn
+###  http://www.semanticweb.org/guest0/ontologies/2017/9/untitled-ontology-18#producedIn
 :producedIn rdf:type owl:ObjectProperty ;
             owl:inverseOf :produces ;
             rdfs:domain :Whisky .
 
 
-###  http://www.whiskydb.org/myontology#produces
+###  http://www.semanticweb.org/guest0/ontologies/2017/9/untitled-ontology-18#produces
 :produces rdf:type owl:ObjectProperty ;
           rdfs:domain <http://schema.org/Place> .
 
@@ -41,7 +41,7 @@
 #    Data properties
 #################################################################
 
-###  http://www.whiskydb.org/myontology#Bottler
+###  http://www.semanticweb.org/guest0/ontologies/2017/9/untitled-ontology-18#Bottler
 :Bottler rdf:type owl:DatatypeProperty ;
          rdfs:subPropertyOf :whiskyprop ;
          rdfs:domain [ rdf:type owl:Restriction ;
@@ -51,7 +51,7 @@
          rdfs:range xsd:string .
 
 
-###  http://www.whiskydb.org/myontology#WhiskyID
+###  http://www.semanticweb.org/guest0/ontologies/2017/9/untitled-ontology-18#WhiskyID
 :WhiskyID rdf:type owl:DatatypeProperty ;
           rdfs:subPropertyOf :whiskyprop ;
           rdfs:domain [ rdf:type owl:Restriction ;
@@ -61,7 +61,7 @@
           rdfs:range xsd:integer .
 
 
-###  http://www.whiskydb.org/myontology#name
+###  http://www.semanticweb.org/guest0/ontologies/2017/9/untitled-ontology-18#name
 :name rdf:type owl:DatatypeProperty ;
       rdfs:domain [ rdf:type owl:Restriction ;
                     owl:onProperty owl:topObjectProperty ;
@@ -70,7 +70,7 @@
       rdfs:range xsd:string .
 
 
-###  http://www.whiskydb.org/myontology#whiskyprop
+###  http://www.semanticweb.org/guest0/ontologies/2017/9/untitled-ontology-18#whiskyprop
 :whiskyprop rdf:type owl:DatatypeProperty ;
             rdfs:domain [ rdf:type owl:Restriction ;
                           owl:onProperty owl:topObjectProperty ;
@@ -86,39 +86,39 @@
 <http://schema.org/Place> rdf:type owl:Class .
 
 
-###  http://www.whiskydb.org/myontology#Alcohol
+###  http://www.semanticweb.org/guest0/ontologies/2017/9/untitled-ontology-18#Alcohol
 :Alcohol rdf:type owl:Class ;
          rdfs:subClassOf :Beverage .
 
 
-###  http://www.whiskydb.org/myontology#Beverage
+###  http://www.semanticweb.org/guest0/ontologies/2017/9/untitled-ontology-18#Beverage
 :Beverage rdf:type owl:Class ;
           rdfs:subClassOf :Consumable .
 
 
-###  http://www.whiskydb.org/myontology#Bourbon
+###  http://www.semanticweb.org/guest0/ontologies/2017/9/untitled-ontology-18#Bourbon
 :Bourbon rdf:type owl:Class ;
          rdfs:subClassOf :Whisky .
 
 
-###  http://www.whiskydb.org/myontology#Consumable
+###  http://www.semanticweb.org/guest0/ontologies/2017/9/untitled-ontology-18#Consumable
 :Consumable rdf:type owl:Class ;
             rdfs:subClassOf :Product .
 
 
-###  http://www.whiskydb.org/myontology#Distilliry
-:Distilliry rdf:type owl:Class .
+###  http://www.semanticweb.org/guest0/ontologies/2017/9/untitled-ontology-18#Distillery
+:Distillery rdf:type owl:Class .
 
 
-###  http://www.whiskydb.org/myontology#Process
+###  http://www.semanticweb.org/guest0/ontologies/2017/9/untitled-ontology-18#Process
 :Process rdf:type owl:Class .
 
 
-###  http://www.whiskydb.org/myontology#Product
+###  http://www.semanticweb.org/guest0/ontologies/2017/9/untitled-ontology-18#Product
 :Product rdf:type owl:Class .
 
 
-###  http://www.whiskydb.org/myontology#Whisky
+###  http://www.semanticweb.org/guest0/ontologies/2017/9/untitled-ontology-18#Whisky
 :Whisky rdf:type owl:Class ;
         rdfs:subClassOf :Alcohol .
 
@@ -127,7 +127,7 @@
 #    Individuals
 #################################################################
 
-###  http://www.whiskydb.org/myontology#Eifel_5_Years
+###  http://www.semanticweb.org/guest0/ontologies/2017/9/untitled-ontology-18#Eifel_5_Years
 :Eifel_5_Years rdf:type owl:NamedIndividual ,
                         :Whisky ;
                :Bottler "Original bottling"^^xsd:string ;
@@ -135,14 +135,14 @@
                :producedIn :Ireland .
 
 
-###  http://www.whiskydb.org/myontology#Ireland
+###  http://www.semanticweb.org/guest0/ontologies/2017/9/untitled-ontology-18#Ireland
 :Ireland rdf:type owl:NamedIndividual ,
                   <http://schema.org/Place> ;
          :name "Ireland"^^xsd:string ;
          :produces :Eifel_5_Years .
 
 
-###  http://www.whiskydb.org/myontology#Lagavulin_1991
+###  http://www.semanticweb.org/guest0/ontologies/2017/9/untitled-ontology-18#Lagavulin_1991
 :Lagavulin_1991 rdf:type owl:NamedIndividual ,
                          :Whisky ;
                 :Bottler "original bottling"^^xsd:string ;
@@ -150,7 +150,7 @@
                 :producedIn :Scotland .
 
 
-###  http://www.whiskydb.org/myontology#Lagavulin_8_year
+###  http://www.semanticweb.org/guest0/ontologies/2017/9/untitled-ontology-18#Lagavulin_8_year
 :Lagavulin_8_year rdf:type owl:NamedIndividual ,
                            :Whisky ;
                   :Bottler "original bottling"^^xsd:string ;
@@ -158,7 +158,7 @@
                   :producedIn :Scotland .
 
 
-###  http://www.whiskydb.org/myontology#Scotland
+###  http://www.semanticweb.org/guest0/ontologies/2017/9/untitled-ontology-18#Scotland
 :Scotland rdf:type owl:NamedIndividual ,
                    <http://schema.org/Place> ;
           :name "Scotland"^^xsd:string ;
@@ -166,7 +166,7 @@
                     :Lagavulin_8_year .
 
 
-###  http://www.whiskydb.org/myontology#USA
+###  http://www.semanticweb.org/guest0/ontologies/2017/9/untitled-ontology-18#USA
 :USA rdf:type owl:NamedIndividual ,
               <http://schema.org/Place> ;
      :name "USA"^^xsd:string .
@@ -175,4 +175,4 @@
 [ :producedIn :Ireland
 ] .
 
-###  Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi
+### Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi
