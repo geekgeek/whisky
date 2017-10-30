@@ -13,11 +13,13 @@
 #################################################################
 
 ###  http://www.semanticweb.org/guest0/ontologies/2017/9/untitled-ontology-18#producedIn
-:producedIn rdf:type owl:AnnotationProperty .
+:producedIn rdf:type owl:AnnotationProperty ;
+            rdfs:range <http://schema.org/Place> .
 
 
 ###  http://www.semanticweb.org/guest0/ontologies/2017/9/untitled-ontology-18#produces
-:produces rdf:type owl:AnnotationProperty .
+:produces rdf:type owl:AnnotationProperty ;
+          rdfs:range :Whisky .
 
 
 #################################################################
@@ -27,14 +29,12 @@
 ###  http://www.semanticweb.org/guest0/ontologies/2017/9/untitled-ontology-18#producedIn
 :producedIn rdf:type owl:ObjectProperty ;
             owl:inverseOf :produces ;
-            rdfs:domain :Whisky ;
-            rdfs:range <http://schema.org/Place> .
+            rdfs:domain :Whisky .
 
 
 ###  http://www.semanticweb.org/guest0/ontologies/2017/9/untitled-ontology-18#produces
 :produces rdf:type owl:ObjectProperty ;
-          rdfs:domain <http://schema.org/Place> ;
-          rdfs:range :Whisky .
+          rdfs:domain <http://schema.org/Place> .
 
 
 #################################################################
@@ -106,8 +106,8 @@
             rdfs:subClassOf :Product .
 
 
-###  http://www.semanticweb.org/guest0/ontologies/2017/9/untitled-ontology-18#Distilliry
-:Distilliry rdf:type owl:Class .
+###  http://www.semanticweb.org/guest0/ontologies/2017/9/untitled-ontology-18#Distillery
+:Distillery rdf:type owl:Class .
 
 
 ###  http://www.semanticweb.org/guest0/ontologies/2017/9/untitled-ontology-18#Process
