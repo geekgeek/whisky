@@ -172,12 +172,6 @@
      :name "USA"^^xsd:string .
 
 
-###  http://www.semanticweb.org/guest0/ontologies/2017/9/untitled-ontology-18#Norge
-:Norge rdf:type owl:NamedIndividual ,
-              <http://schema.org/Place> ;
-     :name "Norge"^^xsd:string .
-
-
 [ :producedIn :Ireland
 ] .
 
